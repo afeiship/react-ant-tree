@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/react-ant-tree",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ant tree wrapper.",
   "main": "dist/index.js",
   "scripts": {
@@ -46,6 +46,7 @@
     "@babel/register": "^7.4.0",
     "@feizheng/rake-git": "^1.2.0",
     "@feizheng/webpack-lib-kits": "^1.1.0",
+    "antd": "^3.25.3",
     "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
@@ -62,7 +63,6 @@
   },
   "dependencies": {
     "@feizheng/noop": "^1.0.0",
-    "antd": "^3.25.3",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
