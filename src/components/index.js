@@ -31,7 +31,7 @@ export default class extends Component {
         if (item.children) {
           return (
             <Tree.TreeNode title={label} key={value} {...itemProps}>
-              {this.renderChildren(children)}
+              {this.renderChildren(item.children)}
             </Tree.TreeNode>
           );
         }
