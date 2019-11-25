@@ -7,49 +7,41 @@ import objectAssign from 'object-assign';
 import { Tree } from 'antd';
 
 const CLASS_NAME = 'react-ant-tree';
-const RETURN_VALUE = (item) => item;
 
 export default class extends Component {
   static displayName = CLASS_NAME;
   static propTypes = {
     className: PropTypes.string,
+    directory: PropTypes.bool,
     items: PropTypes.array,
-    transform: PropTypes.func
+    template: PropTypes.func.isRequired
   };
 
   static defaultProps = {
+    directory: false,
     items: [],
-    transform: RETURN_VALUE
+    template: noop
   };
 
-  renderChildren(inData) {
-    const { transform } = this.props;
-    if (inData && inData.length) {
-      return inData.map((item) => {
-        const _item = transform(item);
-        const { label, value, ...itemProps } = _item;
-        if (item.children) {
-          return (
-            <Tree.TreeNode title={label} key={value} {...itemProps}>
-              {this.renderChildren(item.children)}
-            </Tree.TreeNode>
-          );
-        }
-        return <Tree.TreeNode title={label} key={value} />;
-      });
-    }
-    return null;
-  }
-
   render() {
-    const { className, children, items, ...props } = this.props;
+    const {
+      className,
+      children,
+      items,
+      template,
+      directory,
+      ...props
+    } = this.props;
+
+    const RootComp = directory ? Tree.DirectoryTree : Tree;
+
     return (
-      <Tree
+      <RootComp
         data-component={CLASS_NAME}
         className={classNames(CLASS_NAME, className)}
         {...props}>
-        {this.renderChildren(items)}
-      </Tree>
+        {template(items)}
+      </RootComp>
     );
   }
 }
