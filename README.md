@@ -16,35 +16,72 @@ npm install -S @feizheng/react-ant-tree
   ```
 2. import js
   ```js
-  import React from 'react';
+  import ReactAntTree from '../src/main';
   import ReactDOM from 'react-dom';
-  import ReactAntTree from 'react-ant-tree';
-  
-  // your app:
-  class App extends React.Component{
-    render(){
+  import React from 'react';
+  import './assets/style.scss';
+
+  class App extends React.Component {
+    constructor(inProps) {
+      super(inProps);
+      this.state = {
+        items: [
+          {
+            label: '0-0',
+            value: '0-0',
+            children: [
+              {
+                label: '0-0-0',
+                value: '0-0-0',
+                children: [
+                  { label: '0-0-0-0', value: '0-0-0-0' },
+                  { label: '0-0-0-1', value: '0-0-0-1' },
+                  { label: '0-0-0-2', value: '0-0-0-2' }
+                ]
+              },
+              {
+                label: '0-0-1',
+                value: '0-0-1',
+                children: [
+                  { label: '0-0-1-0', value: '0-0-1-0' },
+                  { label: '0-0-1-1', value: '0-0-1-1' },
+                  { label: '0-0-1-2', value: '0-0-1-2' }
+                ]
+              },
+              {
+                label: '0-0-2',
+                value: '0-0-2'
+              }
+            ]
+          },
+          {
+            label: '0-1',
+            value: '0-1',
+            children: [
+              { label: '0-1-0-0', value: '0-1-0-0' },
+              { label: '0-1-0-1', value: '0-1-0-1' },
+              { label: '0-1-0-2', value: '0-1-0-2' }
+            ]
+          },
+          {
+            label: '0-2',
+            value: '0-2'
+          }
+        ]
+      };
+    }
+
+    render() {
       return (
-        <ReactAntTree />
-      )
+        <div className="app-container">
+          <ReactAntTree showLine items={this.state.items} />
+        </div>
+      );
     }
   }
 
-  // render to dom:
-  ReactDOM.render(<App/>, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
   ```
 
 ## documentation
 - https://afeiship.github.io/react-ant-tree/
-
-## resources
-- https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
-- https://www.valentinog.com/blog/react-webpack-babel/
-- https://jestjs.io/docs/en/tutorial-react#snapshot-testing-with-mocks-enzyme-and-react-16
-- https://testing-library.com/docs/react-testing-library/api
-
-## todos
-- [ ] Add: semver number for every build files.
-- [ ] Add: need output css files.
-- [ ] Add: PWA support for docs.
-- [ ] Add: source.map file for dist(`you can upload for production debug`).
-- [ ] BUG: npm run dev will clean dist.
