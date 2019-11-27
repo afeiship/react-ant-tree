@@ -15,7 +15,7 @@ npm install -S @feizheng/react-ant-tree
   $react-ant-tree-options: ()
   ```
 2. import js
-  ```js
+  ```jsx
   import ReactAntTree from '../src/main';
   import ReactDOM from 'react-dom';
   import React from 'react';
@@ -72,21 +72,20 @@ npm install -S @feizheng/react-ant-tree
       };
     }
 
-    template = (inData) => {
-      if (inData && inData.length) {
-        return inData.map((item) => {
-          const { label, value, ...itemProps } = item;
-          if (item.children) {
-            return (
-              <Tree.TreeNode title={label} key={value} {...itemProps}>
-                {this.template(item.children)}
-              </Tree.TreeNode>
-            );
-          }
-          return <Tree.TreeNode title={label} key={value} />;
-        });
+    template = ({ item }, cb) => {
+      const { value, label } = item;
+      if (cb) {
+        return (
+          <Tree.TreeNode
+            key={value}
+            value={value}
+            title={label}
+            children={cb()}
+          />
+        );
+      } else {
+        return <Tree.TreeNode key={value} value={value} title={label} />;
       }
-      return null;
     };
 
     render() {
@@ -103,7 +102,6 @@ npm install -S @feizheng/react-ant-tree
   }
 
   ReactDOM.render(<App />, document.getElementById('app'));
-
   ```
 
 ## documentation
