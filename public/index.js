@@ -55,19 +55,10 @@ class App extends React.Component {
   }
 
   template = ({ item }, cb) => {
-    const { value, label } = item;
-    if (cb) {
-      return (
-        <Tree.TreeNode
-          key={value}
-          value={value}
-          title={label}
-          children={cb()}
-        />
-      );
-    } else {
-      return <Tree.TreeNode key={value} value={value} title={label} />;
-    }
+    const { value, label, independent } = item;
+    return (
+      <Tree.TreeNode key={value} value={value} title={label} children={cb()} />
+    );
   };
 
   render() {

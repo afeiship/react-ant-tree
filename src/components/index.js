@@ -9,13 +9,9 @@ import { Tree } from 'antd';
 const CLASS_NAME = 'react-ant-tree';
 const RETURN_TEMPLATE = ({ item }, cb) => {
   const { value, label } = item;
-  if (cb) {
-    return (
-      <Tree.TreeNode key={value} value={value} title={label} children={cb()} />
-    );
-  } else {
-    return <Tree.TreeNode key={value} value={value} title={label} />;
-  }
+  return (
+    <Tree.TreeNode key={value} value={value} title={label} children={cb()} />
+  );
 };
 
 export default class extends Component {
@@ -39,10 +35,10 @@ export default class extends Component {
       return inItems.map((item, index) => {
         const { children } = item;
         const cb = () => walk(children);
-        const hasChild = children && children.length;
+        const independent = !(children && children.length);
+        const callback = independent ? noop : cb;
         const target = { item, index };
-        const args = hasChild ? [target, cb] : [target];
-        return template.apply(this, args);
+        return template.apply(this, [target, callback]);
       });
     };
     return walk(items);
