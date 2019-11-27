@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import noop from '@feizheng/noop';
 import objectAssign from 'object-assign';
 import { Tree } from 'antd';
+import nxTreeWalk from '@feizheng/next-tree-walk';
 
 const CLASS_NAME = 'react-ant-tree';
 const RETURN_TEMPLATE = ({ item }, cb) => {
@@ -31,17 +32,7 @@ export default class extends Component {
 
   get childView() {
     const { items, template } = this.props;
-    const walk = (inItems) => {
-      return inItems.map((item, index) => {
-        const { children } = item;
-        const cb = () => walk(children);
-        const independent = !(children && children.length);
-        const callback = independent ? noop : cb;
-        const target = { item, index };
-        return template.apply(this, [target, callback]);
-      });
-    };
-    return walk(items);
+    return nxTreeWalk(items, { template });
   }
 
   render() {
