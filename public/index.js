@@ -61,10 +61,15 @@ class App extends React.Component {
     );
   };
 
+  onSelect = (s, e) => {
+    console.log('s,e', s, e);
+  };
+
   render() {
     return (
       <div className="app-container">
         <ReactAntTree
+          onSelect={this.onSelect}
           showLine
           items={this.state.items}
           template={this.template}
