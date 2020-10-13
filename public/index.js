@@ -1,7 +1,8 @@
-import ReactAntTree from '../src/main';
-import ReactDOM from 'react-dom';
-import React from 'react';
+import ReactDemokit from '@feizheng/react-demokit';
 import { Tree } from 'antd';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactAntTree from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
@@ -57,7 +58,9 @@ class App extends React.Component {
   template = ({ item }, cb) => {
     const { value, label, independent } = item;
     return (
-      <Tree.TreeNode key={value} value={value} title={label} children={cb()} />
+      <Tree.TreeNode key={value} value={value} title={label}>
+        {cb()}
+      </Tree.TreeNode>
     );
   };
 
@@ -67,14 +70,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app-container">
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-ant-tree">
         <ReactAntTree
           onSelect={this.onSelect}
           showLine
           items={this.state.items}
           template={this.template}
         />
-      </div>
+      </ReactDemokit>
     );
   }
 }

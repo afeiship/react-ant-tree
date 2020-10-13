@@ -1,18 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body,
-#app,
-.app-container {
-  height: 100%;
-}
-
 @import "@/components/style.scss";
+@import "~@feizheng/react-github-corner/dist/style.scss";
+@import "~@feizheng/react-sw-update-tips/dist/style.scss";
+@import "~@feizheng/react-demokit/dist/style.scss";
 
 .app-container {
-  padding: 50px;
   .button {
     background: #3cc51f;
     width: 100%;
@@ -29,6 +20,13 @@ body,
 
     &:focus {
       outline: none;
+    }
+  }
+
+  &.react-demokit {
+    > .is-body {
+      padding: 20px;
+      background: #fff;
     }
   }
 }

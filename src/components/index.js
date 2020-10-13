@@ -1,38 +1,50 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
-import { Tree } from 'antd';
 import nxTreeWalk from '@feizheng/next-tree-walk';
+import { Tree } from 'antd';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 const CLASS_NAME = 'react-ant-tree';
 const RETURN_TEMPLATE = ({ item }, cb) => {
   const { value, label } = item;
   return (
-    <Tree.TreeNode key={value} value={value} title={label} children={cb()} />
+    <Tree.TreeNode key={value} value={value} title={label}>
+      {cb()}
+    </Tree.TreeNode>
   );
 };
 
-export default class extends Component {
+export default class ReactAntTree extends Component {
   static displayName = CLASS_NAME;
+  static version = '__VERSION__';
   static propTypes = {
+    /**
+     * The extended className for component.
+     */
     className: PropTypes.string,
+    /**
+     * If show directory icon.
+     */
     directory: PropTypes.bool,
+    /**
+     * The tree data.
+     */
     items: PropTypes.array,
+    /**
+     * The item template function.
+     */
     template: PropTypes.func.isRequired,
-    itemsKey: PropTypes.oneOfType([
-       PropTypes.string,
-       PropTypes.func,
-    ])
+    /**
+     * The items key.
+     */
+    itemsKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
   };
 
   static defaultProps = {
     directory: false,
     items: [],
     template: RETURN_TEMPLATE,
-    itemsKey:'children'
+    itemsKey: 'children'
   };
 
   get childView() {
