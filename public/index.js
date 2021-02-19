@@ -1,8 +1,8 @@
-import ReactDemokit from '@feizheng/react-demokit';
-import { Tree } from 'antd';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactAntTree from '../src/main';
+import { Tree } from 'antd';
 import './assets/style.scss';
 
 class App extends React.Component {

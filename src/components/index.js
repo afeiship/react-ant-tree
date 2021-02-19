@@ -1,4 +1,4 @@
-import nxTreeWalk from '@feizheng/next-tree-walk';
+import nxTreeWalk from '@jswork/next-tree-walk';
 import { Tree } from 'antd';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -74,3 +74,4 @@ export default class ReactAntTree extends Component {
     );
   }
 }
+
