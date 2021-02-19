@@ -20,17 +20,9 @@
     "url": "git+https://github.com/afeiship/react-ant-tree.git"
   },
   "keywords": [
-    "boilerplate",
     "react",
-    "component",
-    "cra",
-    "template",
-    "webpack",
-    "sass",
-    "scss",
-    "docs",
-    "service-worker",
-    "sw"
+    "ant",
+    "tree"
   ],
   "author": "afei",
   "license": "MIT",

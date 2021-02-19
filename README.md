@@ -12,11 +12,13 @@ npm install -S @jswork/react-ant-tree
 ```
 
 ## properties
-| Name      | Type   | Required | Default | Description                           |
-| --------- | ------ | -------- | ------- | ------------------------------------- |
-| className | string | false    | -       | The extended className for component. |
-| value     | object | false    | null    | The changed value.                    |
-| onChange  | func   | false    | noop    | The change handler.                   |
+| Name      | Type   | Required | Default    | Description                           |
+| --------- | ------ | -------- | ---------- | ------------------------------------- |
+| className | string | false    | -          | The extended className for component. |
+| directory | bool   | false    | false      | If show directory icon.               |
+| items     | array  | false    | []         | The tree data.                        |
+| template  | func   | false    | -          | The item template function.           |
+| itemsKey  | union  | false    | 'children' | The items key.                        |
 
 
 ## usage
@@ -36,16 +38,83 @@ npm install -S @jswork/react-ant-tree
   import React from 'react';
   import ReactDOM from 'react-dom';
   import ReactAntTree from '@jswork/react-ant-tree';
+  import { Tree } from 'antd';
   import './assets/style.scss';
 
   class App extends React.Component {
+    constructor(inProps) {
+      super(inProps);
+      this.state = {
+        items: [
+          {
+            label: '0-0',
+            value: '0-0',
+            children: [
+              {
+                label: '0-0-0',
+                value: '0-0-0',
+                children: [
+                  { label: '0-0-0-0', value: '0-0-0-0' },
+                  { label: '0-0-0-1', value: '0-0-0-1' },
+                  { label: '0-0-0-2', value: '0-0-0-2' }
+                ]
+              },
+              {
+                label: '0-0-1',
+                value: '0-0-1',
+                children: [
+                  { label: '0-0-1-0', value: '0-0-1-0' },
+                  { label: '0-0-1-1', value: '0-0-1-1' },
+                  { label: '0-0-1-2', value: '0-0-1-2' }
+                ]
+              },
+              {
+                label: '0-0-2',
+                value: '0-0-2'
+              }
+            ]
+          },
+          {
+            label: '0-1',
+            value: '0-1',
+            children: [
+              { label: '0-1-0-0', value: '0-1-0-0' },
+              { label: '0-1-0-1', value: '0-1-0-1' },
+              { label: '0-1-0-2', value: '0-1-0-2' }
+            ]
+          },
+          {
+            label: '0-2',
+            value: '0-2'
+          }
+        ]
+      };
+    }
+
+    template = ({ item }, cb) => {
+      const { value, label, independent } = item;
+      return (
+        <Tree.TreeNode key={value} value={value} title={label}>
+          {cb()}
+        </Tree.TreeNode>
+      );
+    };
+
+    onSelect = (s, e) => {
+      console.log('s,e', s, e);
+    };
+
     render() {
       return (
         <ReactDemokit
           className="p-3 app-container"
           url="https://github.com/afeiship/react-ant-tree">
-          <ReactAntTree className="mb-5 has-text-white" />
-          <button className="button is-primary is-fullwidth">Start~</button>
+          <ReactAntTree
+            onSelect={this.onSelect}
+            showLine
+            items={this.state.items}
+            template={this.template}
+          />
         </ReactDemokit>
       );
     }
