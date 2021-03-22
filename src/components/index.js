@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 const CLASS_NAME = 'react-ant-tree';
-const RETURN_TEMPLATE = ({ item }, cb) => {
+const DEFAULT_TEMPLATE = ({ item }, cb) => {
   const { value, label } = item;
   return (
     <Tree.TreeNode key={value} value={value} title={label}>
@@ -43,7 +43,7 @@ export default class ReactAntTree extends Component {
   static defaultProps = {
     directory: false,
     items: [],
-    template: RETURN_TEMPLATE,
+    template: DEFAULT_TEMPLATE,
     itemsKey: 'children'
   };
 
@@ -74,4 +74,3 @@ export default class ReactAntTree extends Component {
     );
   }
 }
-
