@@ -1,5 +1,5 @@
 import nxTreeWalk from '@jswork/next-tree-walk';
-import { Tree } from 'antd';
+import { Tree, ConfigProvider } from 'antd';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -37,7 +37,11 @@ export default class ReactAntTree extends Component {
     /**
      * The items key.
      */
-    itemsKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+    itemsKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    /**
+     * Ant prefix class.
+     */
+    prefixCls: PropTypes.string
   };
 
   static defaultProps = {
@@ -59,18 +63,21 @@ export default class ReactAntTree extends Component {
       items,
       template,
       directory,
+      prefixCls,
       ...props
     } = this.props;
 
     const RootComp = directory ? Tree.DirectoryTree : Tree;
 
     return (
-      <RootComp
-        data-component={CLASS_NAME}
-        className={classNames(CLASS_NAME, className)}
-        {...props}>
-        {this.childView}
-      </RootComp>
+      <ConfigProvider prefixCls={prefixCls}>
+        <RootComp
+          data-component={CLASS_NAME}
+          className={classNames(CLASS_NAME, className)}
+          {...props}>
+          {this.childView}
+        </RootComp>
+      </ConfigProvider>
     );
   }
 }
