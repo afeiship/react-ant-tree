@@ -37,7 +37,7 @@ export default class ReactAntTree extends Component {
     /**
      * The items key.
      */
-    itemsKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    itemsKey: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
   };
 
   static defaultProps = {
@@ -65,13 +65,15 @@ export default class ReactAntTree extends Component {
 
     const RootComp = directory ? Tree.DirectoryTree : Tree;
 
+    if (items.length === 0) return null;
+
     return (
-        <RootComp
-          data-component={CLASS_NAME}
-          className={classNames(CLASS_NAME, className)}
-          {...props}>
-          {this.childView}
-        </RootComp>
+      <RootComp
+        data-component={CLASS_NAME}
+        className={classNames(CLASS_NAME, className)}
+        {...props}>
+        {this.childView}
+      </RootComp>
     );
   }
 }
