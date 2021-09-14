@@ -81,7 +81,7 @@
     "prop-types": "^15.7.2"
   },
   "dependencies": {
-    "@jswork/next-tree-walk": "^1.0.0",
+    "@jswork/next-tree-walk": "^1.0.2",
     "@jswork/noop": "^1.0.0",
     "classnames": "^2.2.6"
   },
