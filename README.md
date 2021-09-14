@@ -19,7 +19,6 @@ npm install -S @jswork/react-ant-tree
 | items     | array  | false    | []         | The tree data.                        |
 | template  | func   | false    | -          | The item template function.           |
 | itemsKey  | union  | false    | 'children' | The items key.                        |
-| prefixCls | string | false    | -          | Ant prefix class.                     |
 
 
 ## usage
