@@ -1,6 +1,6 @@
 {
   "name": "@jswork/react-ant-tree",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ant tree wrapper.",
   "main": "dist/index.js",
   "scripts": {
