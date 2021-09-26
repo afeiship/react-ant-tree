@@ -1,0 +1,406 @@
+{
+  "children": [
+    {
+      "uuid": "070edacb771e7b50d4bbe2c810c0220d",
+      "title": "bbb1",
+      "type": "catalogue",
+      "children": [
+        {
+          "uuid": "805c312a2ced60ea3b242468d0527bf7",
+          "name": "互动PPT课件",
+          "businessConfigUuid": "MIXED_COURSEWARE",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "AI模考",
+          "businessConfigUuid": "AI_MOCK_EXAM",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "绘本作业",
+          "businessConfigUuid": "PIC_BOOK_HOMEWORK",
+          "contentCreatable": false,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "Wendytest",
+          "businessConfigUuid": "456",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "PPT课件",
+          "businessConfigUuid": "PPT_COURSEWARE",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "教学重点",
+          "businessConfigUuid": "TEACHING_POINTS",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        }
+      ]
+    },
+    {
+      "uuid": "104284ae933d62265a41e98d319f2700",
+      "title": "bbb2",
+      "children": [
+        {
+          "uuid": "6613080871e1bfa1c5b257c322ebb47c",
+          "title": "aaaa333",
+          "type": "catalogue"
+        }
+      ],
+      "type": "catalogue"
+    },
+    {
+      "uuid": "536ea7cb303328ebf8c6006cf993885b",
+      "title": "b2",
+      "type": "catalogue",
+      "children": [
+        {
+          "uuid": "d2afa645ebba5fbcf2709ed1e5d66fda",
+          "name": "常规练习",
+          "businessConfigUuid": "HOMEWORK",
+          "contentCreatable": false,
+          "displayStatus": "NORMAL",
+          "type": "business",
+          "children": [
+            {
+              "uuid": "6a6bbc902153e8635c595f0d2621cd6c",
+              "name": "未命名单元（Unit）",
+              "businessConfigUuid": "HOMEWORK",
+              "contentCreatable": false,
+              "level": 1,
+              "displayStatus": "NORMAL",
+              "type": "node",
+              "children": [
+                {
+                  "uuid": "7171e54c5d1187ae7caf4a7f656715ca",
+                  "name": "未命名题包（Package）",
+                  "businessConfigUuid": "HOMEWORK",
+                  "contentCreatable": true,
+                  "level": 2,
+                  "displayStatus": "NORMAL",
+                  "type": "node"
+                }
+              ]
+            },
+            {
+              "uuid": "389f047aeb071058fc52cd7dbd21ca6c",
+              "name": "未命名单元（Unit）",
+              "businessConfigUuid": "HOMEWORK",
+              "contentCreatable": false,
+              "level": 1,
+              "displayStatus": "NORMAL",
+              "type": "node"
+            }
+          ]
+        },
+        {
+          "uuid": "22079a7d5bcc6ceb91ad877aead8cd16",
+          "name": "互动PPT课件",
+          "businessConfigUuid": "MIXED_COURSEWARE",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "AI模考",
+          "businessConfigUuid": "AI_MOCK_EXAM",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "绘本作业",
+          "businessConfigUuid": "PIC_BOOK_HOMEWORK",
+          "contentCreatable": false,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "Wendytest",
+          "businessConfigUuid": "456",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "PPT课件",
+          "businessConfigUuid": "PPT_COURSEWARE",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "教学重点",
+          "businessConfigUuid": "TEACHING_POINTS",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        }
+      ]
+    },
+    {
+      "uuid": "e42f5e4d8c8c21237bdd12f5303e8d2c",
+      "title": "b3",
+      "type": "catalogue",
+      "children": [
+        {
+          "uuid": "786a78d18dc15678b9531a3da0e5ff47",
+          "name": "group 1",
+          "businessConfigUuid": "HOMEWORK",
+          "contentCreatable": false,
+          "displayStatus": "NORMAL",
+          "type": "business",
+          "children": [
+            {
+              "uuid": "43ec3612459c508cb3ed705661db4387",
+              "name": "未命名单元（Unit 1）",
+              "businessConfigUuid": "HOMEWORK",
+              "contentCreatable": false,
+              "level": 1,
+              "displayStatus": "NORMAL",
+              "type": "node",
+              "children": [
+                {
+                  "uuid": "1965a5eecdf782ce4db0ee2cbfe604fa",
+                  "name": "未命名题包（Package 1）",
+                  "businessConfigUuid": "HOMEWORK",
+                  "contentCreatable": true,
+                  "level": 2,
+                  "displayStatus": "NORMAL",
+                  "type": "node"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "e5cb46299b2ec18e471ecf2c332f1acd",
+          "name": "互动PPT课件",
+          "businessConfigUuid": "MIXED_COURSEWARE",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "AI模考",
+          "businessConfigUuid": "AI_MOCK_EXAM",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "绘本作业",
+          "businessConfigUuid": "PIC_BOOK_HOMEWORK",
+          "contentCreatable": false,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "Wendytest",
+          "businessConfigUuid": "456",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "PPT课件",
+          "businessConfigUuid": "PPT_COURSEWARE",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        },
+        {
+          "name": "教学重点",
+          "businessConfigUuid": "TEACHING_POINTS",
+          "contentCreatable": true,
+          "displayStatus": "NORMAL",
+          "type": "business"
+        }
+      ]
+    },
+    {
+      "uuid": "07f22ff37326a8c1f76e8c06e392ff1e",
+      "title": "test 4",
+      "children": [
+        {
+          "uuid": "0e491666efcf83b331091e6dd3dbfd1c",
+          "title": "test 004",
+          "type": "catalogue",
+          "children": [
+            {
+              "uuid": "9eb3747da92a5b23fad99774495bc506",
+              "name": "互动PPT课件",
+              "businessConfigUuid": "MIXED_COURSEWARE",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "AI模考",
+              "businessConfigUuid": "AI_MOCK_EXAM",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "绘本作业",
+              "businessConfigUuid": "PIC_BOOK_HOMEWORK",
+              "contentCreatable": false,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "Wendytest",
+              "businessConfigUuid": "456",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "PPT课件",
+              "businessConfigUuid": "PPT_COURSEWARE",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "教学重点",
+              "businessConfigUuid": "TEACHING_POINTS",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            }
+          ]
+        }
+      ],
+      "type": "catalogue"
+    },
+    {
+      "uuid": "828c22201d29246be1de52d5a126cb8f",
+      "title": "test 5",
+      "children": [
+        {
+          "uuid": "2fab42480c2cad823d89f909a5d6d606",
+          "title": "test 005",
+          "type": "catalogue",
+          "children": [
+            {
+              "uuid": "7f839f5df9339daf82fec2d46cd8ce27",
+              "name": "互动PPT课件",
+              "businessConfigUuid": "MIXED_COURSEWARE",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "AI模考",
+              "businessConfigUuid": "AI_MOCK_EXAM",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "绘本作业",
+              "businessConfigUuid": "PIC_BOOK_HOMEWORK",
+              "contentCreatable": false,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "Wendytest",
+              "businessConfigUuid": "456",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "PPT课件",
+              "businessConfigUuid": "PPT_COURSEWARE",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "教学重点",
+              "businessConfigUuid": "TEACHING_POINTS",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            }
+          ]
+        }
+      ],
+      "type": "catalogue"
+    },
+    {
+      "uuid": "c34b043ad47bc0c5c5458ce7ba83a208",
+      "title": "test 6",
+      "children": [
+        {
+          "uuid": "ad95fc5cb0cadf0eeb4ef2eed7166bb7",
+          "title": "test 006",
+          "type": "catalogue",
+          "children": [
+            {
+              "uuid": "c647abbc9ccb8557219a2880d801152e",
+              "name": "互动PPT课件",
+              "businessConfigUuid": "MIXED_COURSEWARE",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "AI模考",
+              "businessConfigUuid": "AI_MOCK_EXAM",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "绘本作业",
+              "businessConfigUuid": "PIC_BOOK_HOMEWORK",
+              "contentCreatable": false,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "Wendytest",
+              "businessConfigUuid": "456",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "PPT课件",
+              "businessConfigUuid": "PPT_COURSEWARE",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            },
+            {
+              "name": "教学重点",
+              "businessConfigUuid": "TEACHING_POINTS",
+              "contentCreatable": true,
+              "displayStatus": "NORMAL",
+              "type": "business"
+            }
+          ]
+        }
+      ],
+      "type": "catalogue"
+    }
+  ]
+}

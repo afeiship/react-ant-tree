@@ -3,12 +3,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactAntTree from '../src/main';
 import { Tree } from 'antd';
+import typedJson from './assets/test2.json';
+import '@jswork/next-key-map';
 import './assets/style.scss';
 
 class App extends React.Component {
   constructor(inProps) {
     super(inProps);
+    const items = typedJson.children;
+    console.log('items', items);
     this.state = {
+      items2: items,
       items: [
         {
           label: '0-0',
@@ -76,7 +81,7 @@ class App extends React.Component {
         <ReactAntTree
           onSelect={this.onSelect}
           showLine
-          items={this.state.items}
+          items={this.state.items2}
           template={this.template}
         />
       </ReactDemokit>
