@@ -7,5 +7,12 @@
   .is-body {
     padding: 20px;
     background: #fff;
+
+    .react-ant-tree{
+      border:1px solid #ccc;
+      width: 50%;
+      margin: 20px auto;
+      padding: 20px;
+    }
   }
 }

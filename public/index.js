@@ -60,7 +60,6 @@ class App extends React.Component {
 
   template = ({ item }, cb) => {
     const { value, label, independent } = item;
-    console.log('item::', item);
     return (
       <Tree.TreeNode
         key={value}
