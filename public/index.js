@@ -10,10 +10,8 @@ import './assets/style.scss';
 class App extends React.Component {
   constructor(inProps) {
     super(inProps);
-    const items = typedJson.children;
-    console.log('items', items);
     this.state = {
-      items2: items,
+      items2: typedJson,
       items: [
         {
           label: '0-0',
@@ -62,15 +60,20 @@ class App extends React.Component {
 
   template = ({ item }, cb) => {
     const { value, label, independent } = item;
+    console.log('item::', item);
     return (
-      <Tree.TreeNode key={value} value={value} title={label}>
+      <Tree.TreeNode
+        key={value}
+        value={value}
+        title={label}
+        disabled={nx.get(item, 'contentCreatable') === false}>
         {cb()}
       </Tree.TreeNode>
     );
   };
 
-  onSelect = (s, e) => {
-    console.log('s,e', s, e);
+  onSelect = (s, e, a) => {
+    console.log('s,e', s, e, a);
   };
 
   render() {
@@ -79,8 +82,8 @@ class App extends React.Component {
         className="p-3 app-container"
         url="https://github.com/afeiship/react-ant-tree">
         <ReactAntTree
+          directory
           onSelect={this.onSelect}
-          showLine
           items={this.state.items2}
           template={this.template}
         />
